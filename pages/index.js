@@ -43,9 +43,7 @@ export default function Home(props) {
                             <EmojiCard
                                 size={emojiSize}
                                 key={emoji.emoji}
-                                label={emoji.label}
-                                emoji={emoji.emoji}
-                                name={emoji.label}
+                                emoji={emoji}
                                 onClick={() => setSelectedEmoji(emoji)}
                             />
                         );
