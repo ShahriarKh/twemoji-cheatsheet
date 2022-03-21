@@ -3,8 +3,17 @@ import Head from "next/head";
 import EmojiCard from "../components/EmojiCard";
 import emojis from "emojibase-data/en/data.json";
 import Grid from "../components/Grid";
+import { useState } from "react";
+import SelectedEmoji from "../components/SelectedEmoji";
 
 export default function Home(props) {
+    const [emojiSize, setEmojiSize] = useState(32);
+    const [selectedEmoji, setSelectedEmoji] = useState();
+
+    function changeEmojiSize(newSize) {
+        setEmojiSize(newSize);
+    }
+
     return (
         <div>
             <Head>
@@ -15,19 +24,35 @@ export default function Home(props) {
                 />
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
-
             <main>
+                {emojis.length}
+                <h1>Twemoji Cheatsheet</h1>
+
+                <input
+                    type="range"
+                    min="16"
+                    max="72"
+                    step="4"
+                    value={emojiSize}
+                    onChange={(e) => changeEmojiSize(e.target.value)}
+                />
+
                 <Grid>
                     {emojis.map((emoji) => {
                         return (
                             <EmojiCard
-                            key={emoji.emoji}
+                                size={emojiSize}
+                                key={emoji.emoji}
                                 label={emoji.label}
                                 emoji={emoji.emoji}
+                                name={emoji.label}
+                                onClick={() => setSelectedEmoji(emoji)}
                             />
                         );
                     })}
                 </Grid>
+
+                {selectedEmoji && <SelectedEmoji emoji={selectedEmoji} />}
             </main>
         </div>
     );
