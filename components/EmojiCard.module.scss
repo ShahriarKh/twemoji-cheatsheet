@@ -11,4 +11,12 @@
     justify-content: center;
 
     // box-shadow: 0 2px 4px 0px rgba(77, 41, 101, 0.2);
+
+    // transition: all 0.3 ease-in-out;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        
+        transform: scale(1.1);
+    }
 }

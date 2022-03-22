@@ -6,4 +6,15 @@
     color: white;
     background-color: #2E163B;
     cursor: pointer;
+
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.1s;
+
+    &:hover {
+        // filter: opacity(0.7);
+        background-color: #4c2a5c;
+        // background-color:#FFCC4D;
+        // color: black;
+    }
 }

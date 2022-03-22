@@ -14,6 +14,10 @@ export default function Home(props) {
         setEmojiSize(newSize);
     }
 
+    function closeSelectedEmojiCard() {
+        setSelectedEmoji(null)
+    }
+
     return (
         <div>
             <Head>
@@ -50,7 +54,7 @@ export default function Home(props) {
                     })}
                 </Grid>
 
-                {selectedEmoji && <SelectedEmoji emoji={selectedEmoji} />}
+                {selectedEmoji && <SelectedEmoji emoji={selectedEmoji} closeFunc={closeSelectedEmojiCard} />}
             </main>
         </div>
     );

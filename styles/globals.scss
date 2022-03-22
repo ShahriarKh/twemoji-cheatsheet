@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,8 +7,11 @@
   font-family: "Poppins";
 }
 
-main {
+html {
   background-color: rgb(46, 22, 59);
+}
+
+main {
   // background-color: white;
   color: white;
   position: relative;
