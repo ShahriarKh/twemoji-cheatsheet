@@ -8,7 +8,7 @@ export default function Button({ onClick, label, url }) {
                     {label}
                 </button>
             ) : (
-                <a target="_blank" className={css["button"]} href={url}>{label}</a>
+                <a target="_blank" rel="noreferrer" className={css["button"]} href={url}>{label}</a>
             )}
         </>
     );

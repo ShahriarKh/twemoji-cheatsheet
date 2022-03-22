@@ -15,6 +15,7 @@ const Twemoji = ({ emoji, size = 24, onClick }) => {
                 src={image}
                 height={size}
                 width={size}
+                alt={emoji.emoji}
             />
         </div>
     );
