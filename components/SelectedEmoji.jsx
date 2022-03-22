@@ -26,15 +26,15 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
                     </span>
                 </header>
                 <p>
-                    <span className={css["info"]}>Emoji:</span> {emoji.emoji}
+                    <span className={css["info"]}>Emoji:</span>{emoji.emoji}
                 </p>
                 {/* <p>Hex: {emoji.hexcode}</p> */}
                 {/* <p>{emoji.tags.join(", ")}</p> */}
                 <p>
-                    <span className={css["info"]}>Since:</span> v{emoji.version}
+                    <span className={css["info"]}>Since:</span>v{emoji.version}
                 </p>
                 <p>
-                    <span className={css["info"]}>HEX:</span>{" "}
+                    <span className={css["info"]}>HEX:</span>
                     <span className={css["hexcode"]}>{emoji.hexcode}</span>
                 </p>
             </div>

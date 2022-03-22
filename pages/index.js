@@ -7,7 +7,7 @@ import { useState } from "react";
 import SelectedEmoji from "../components/SelectedEmoji";
 
 export default function Home(props) {
-    const [emojiSize, setEmojiSize] = useState(32);
+    const [emojiSize, setEmojiSize] = useState(40);
     const [selectedEmoji, setSelectedEmoji] = useState();
 
     function changeEmojiSize(newSize) {

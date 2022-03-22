@@ -50,26 +50,32 @@
 .col--info {
     height: 100%;
     overflow: clip;
+    font-size: 14px;
 
     .info {
         font-weight: 600;
         color: #d8b7ce;
-        font-size: 14px;
+        
+        width: 56px;
+        display: inline-block;
     }
 }
 
 .title {
     text-transform: capitalize;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 8px;
 }
 
 .header {
     display: grid;
     grid-template-columns: 1fr 24px;
     width: 100%;
+    gap: 4px
 }
 
 .hexcode {
     font-family: "Jetbrains Mono";
-    // letter-spacing: 1px;
-    // text-transform: lowercase;
+    display: inline-block; // for long hexcodes
 }
