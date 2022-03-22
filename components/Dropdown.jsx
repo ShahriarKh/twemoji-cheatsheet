@@ -47,7 +47,7 @@ export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
                             ))}
                         </div>
                     ) : null}
-                    <Button onClick={() => clearSelection()} label="Clear" />
+                    {selectedItem && <Button onClick={() => clearSelection()} label="Reset" />}
                 </div>
             )}
         </Downshift>

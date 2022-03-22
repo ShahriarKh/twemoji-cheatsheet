@@ -5,20 +5,15 @@
     flex-wrap: wrap;
     width: max-content;
     max-width: 90%;
-    margin: auto;
+    margin: 32px auto 32px;
 
     background-color: #3d214b;
-    padding: 24px 32px;
-    border-radius: 24px;
+    padding: 16px 32px;
+    border-radius: 32px;
 
     h3 {
-        // color: #d8b7ce;
         margin-bottom: 8px;
-        
     }
-
-    margin-bottom: 16px;
-    // flex-direction: column;
 
     accent-color: #FFCC4D;
 }

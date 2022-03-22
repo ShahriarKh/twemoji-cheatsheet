@@ -16,6 +16,11 @@ $rad: 8px;
     border-radius: $rad;
     text-transform: capitalize;
     margin-bottom: 8px;
+    transition: all 0.1s;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .menu {
@@ -37,7 +42,10 @@ $rad: 8px;
     text-transform: capitalize;
     padding: 8px 16px;
     font-weight: 600;
-    border-bottom: solid 2px rgb(227, 221, 231);
+    border-bottom: solid 2px #664268;
+    background-color: #724985;
+    color: white;
+    transition: all 0.1s;
 
     // &:nth-child(2n) {
         // background-color: rgb(224, 224, 224);
@@ -53,6 +61,7 @@ $rad: 8px;
 
     &:hover {
         background-color: #FFCC4D;
+        color: black;
     }
     
 }
