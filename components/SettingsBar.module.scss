@@ -1,7 +1,10 @@
 .bar {
     display: flex;
     justify-content: space-evenly;
-    // width: max-content;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: max-content;
+    margin: auto;
 
     background-color: #3d214b;
     padding: 24px 32px;

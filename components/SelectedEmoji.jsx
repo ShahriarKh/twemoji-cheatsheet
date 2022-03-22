@@ -31,7 +31,7 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
                 {/* <p>Hex: {emoji.hexcode}</p> */}
                 {/* <p>{emoji.tags.join(", ")}</p> */}
                 <p>
-                    <span className={css["info"]}>Since:</span>v{emoji.version}
+                    <span className={css["info"]}>Since:</span>Version {emoji.version}
                 </p>
                 <p>
                     <span className={css["info"]}>HEX:</span>

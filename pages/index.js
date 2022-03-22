@@ -9,7 +9,9 @@ import SettingsBar from "../components/SettingsBar";
 export default function Home(props) {
     const [emojiSize, setEmojiSize] = useState(40);
     const [selectedEmoji, setSelectedEmoji] = useState();
-    const [visibleEmojis, setVisibleEmojis] = useState(emojis);
+
+    const [selectedVersion, setSelectedVersion] = useState();
+    const [selectedGroup, setSelectedGroup] = useState();
 
     function changeEmojiSize(newSize) {
         setEmojiSize(newSize);
@@ -19,17 +21,9 @@ export default function Home(props) {
         setSelectedEmoji(null);
     }
 
-    function filterByGroup(groupNumber) {
-        setVisibleEmojis(emojis.filter((x) => x.group == groupNumber));
-    }
+    const versions = [...new Set(emojis.map((emoji) => emoji.version))];
+    versions.sort((a, b) => b - a);
 
-    function filterByVersion(versionNumber) {
-        setVisibleEmojis(emojis.filter((x) => x.version == versionNumber));
-    }
-
-    function removeFilter() {
-        setVisibleEmojis(emojis);
-    }
 
     return (
         <div>
@@ -44,11 +38,12 @@ export default function Home(props) {
 
             <main>
                 <h1>Twemoji Cheatsheet</h1>
+                
                 <SettingsBar
                     totalEmojis={emojis.length}
-                    filterByGroup={filterByGroup}
-                    removeFilter={removeFilter}
-                    filterByVersion={filterByVersion}
+                    filterByVersion={setSelectedVersion}
+                    filterByGroup={setSelectedGroup}
+                    versions={versions}
                     sizeSlider={
                         <input
                             type="range"
@@ -62,16 +57,22 @@ export default function Home(props) {
                 />
 
                 <Grid>
-                    {visibleEmojis.map((emoji) => {
-                        return (
-                            <EmojiCard
-                                size={emojiSize}
-                                key={emoji.emoji}
-                                emoji={emoji}
-                                onClick={() => setSelectedEmoji(emoji)}
-                            />
-                        );
-                    })}
+                    {emojis
+                        .filter(
+                            (em) =>
+                                (selectedVersion ? em.version == selectedVersion : true) &&
+                                (selectedGroup ? em.group == selectedGroup : true)
+                        )
+                        .map((emoji) => {
+                            return (
+                                <EmojiCard
+                                    size={emojiSize}
+                                    key={emoji.emoji}
+                                    emoji={emoji}
+                                    onClick={() => setSelectedEmoji(emoji)}
+                                />
+                            );
+                        })}
                 </Grid>
 
                 {selectedEmoji && (

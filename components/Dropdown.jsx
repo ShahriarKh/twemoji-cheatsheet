@@ -1,26 +1,30 @@
-import Downshift, { useSelect } from "downshift";
+import Downshift from "downshift";
+import Button from "./Button"
 import css from "./Dropdown.module.scss";
 
-
-
-export default function Dropdown({ onChangeFunc, items }) {
+export default function Dropdown({ onChangeFunc, onClearFunc, items }) {
     return (
         <Downshift
-        onChange={selected => onChangeFunc(selected.val)}>
+            id="switcher"
+            onChange={(selected) => {
+                selected ? onChangeFunc(selected.val) : onClearFunc();
+            }}
+        >
             {({
-                getLabelProps,
-                getInputProps,
-                getButtonProps,
+                // getLabelProps,
+                // getInputProps,
+                // getButtonProps,
                 getItemProps,
                 isOpen,
                 toggleMenu,
                 clearSelection,
                 selectedItem,
-                inputValue,
-                highlightedIndex,
+                // inputValue,
+                // highlightedIndex,
             }) => (
                 <div className={css["box"]}>
-                    <button className={css['selector']}
+                    <button
+                        className={css["selector"]}
                         type="button"
                         onClick={toggleMenu}
                         data-toggle="dropdown"
@@ -29,10 +33,15 @@ export default function Dropdown({ onChangeFunc, items }) {
                     >
                         {selectedItem ? selectedItem.label : "Select an item"}
                     </button>
+                    <Button onClick={() => clearSelection()} label="Clear" />
                     {isOpen ? (
                         <div className={css["menu"]}>
                             {items.map((item) => (
-                                <button {...getItemProps({ item })} key={item} className={css["menu__item"]}>
+                                <button
+                                    {...getItemProps({ item })}
+                                    key={item.label}
+                                    className={css["menu__item"]}
+                                >
                                     {item.label}
                                 </button>
                             ))}
