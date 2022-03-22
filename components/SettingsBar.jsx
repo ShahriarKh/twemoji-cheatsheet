@@ -28,10 +28,7 @@ export default function SettingsBar({
             {/* <div>
                 <h3>Skin Tone</h3>
             </div> */}
-            <div>
-                <h3>Size</h3>
-                {sizeSlider}
-            </div>
+            
             <div>
                 <h3>Groups</h3>
                 <Dropdown
@@ -49,6 +46,10 @@ export default function SettingsBar({
                     onClearFunc={() => filterByVersion(null)}
                     name="Versions"
                 />
+            </div>
+            <div>
+                <h3>Size</h3>
+                {sizeSlider}
             </div>
             {/* <div>
                 <h3>Info</h3>

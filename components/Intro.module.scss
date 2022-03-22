@@ -1,0 +1,19 @@
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+
+    h1 {
+        font-size: 56px;
+        margin-bottom: 16px;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 36px;
+            
+        }
+    }
+
+    a {
+        color: #FFCC4D
+    }
+}

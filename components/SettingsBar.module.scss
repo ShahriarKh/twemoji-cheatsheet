@@ -4,7 +4,7 @@
     gap: 24px;
     flex-wrap: wrap;
     width: max-content;
-    max-width: calc(100vw - 64px);
+    max-width: 90%;
     margin: auto;
 
     background-color: #3d214b;
@@ -12,7 +12,9 @@
     border-radius: 24px;
 
     h3 {
-        color: #d8b7ce
+        // color: #d8b7ce;
+        margin-bottom: 8px;
+        
     }
 
     margin-bottom: 16px;

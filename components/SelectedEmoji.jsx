@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function SelectedEmoji({ emoji, closeFunc }) {
    
-    const [buttonText, setButtonText] = useState(`Copy ${emoji.emoji}`)
+    const [buttonText, setButtonText] = useState(`Copy`)
     const [tooltipText, setTooltipText] = useState("Click to Copy")
 
     const img = getEmojiUrl(emoji.hexcode)
@@ -15,7 +15,7 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
         navigator.clipboard.writeText(val);
         if (place == "button") {
             setButtonText("Copied!")
-            setTimeout(() => setButtonText(`Copy ${emoji.emoji}`), 1000)
+            setTimeout(() => setButtonText(`Copy`), 1000)
         } else {
             setTooltipText("Copied!")
             setTimeout(() => setTooltipText("Click to Copy"), 1000)
