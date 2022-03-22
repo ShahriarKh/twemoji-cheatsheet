@@ -15,32 +15,33 @@ $rad: 8px;
     height: 40px;
     border-radius: $rad;
     text-transform: capitalize;
+    margin-bottom: 8px;
 }
 
 .menu {
     position: absolute;
-    width: 100%;
-    // left: -48px;
+    min-width: 100%;
+    width: max-content;
     display: flex;
     flex-direction: column;
     z-index: 1000;
     cursor: pointer;
-    margin: 8px 0;
     border-radius: $rad;
-
-    // &:hover {
-        button {
-            &:hover {
-            background-color: red;
-            }
-        }
-    // }
+    box-shadow: 0px 1px 4px 2px #1d0a36cc;
+    left: 50%;
+        transform: translate(-50%, 0);
 }
 
 .menu__item {
     cursor: pointer;
     text-transform: capitalize;
-    padding: 4px;
+    padding: 8px 16px;
+    font-weight: 600;
+    border-bottom: solid 2px rgb(227, 221, 231);
+
+    // &:nth-child(2n) {
+        // background-color: rgb(224, 224, 224);
+    // }
 
     &:first-child {
         border-radius: $rad $rad 0 0;
@@ -50,8 +51,8 @@ $rad: 8px;
         border-radius: 0 0 $rad $rad;
     }
 
-    // &:hover {
-    //     background-color: yellow;
-    // }
+    &:hover {
+        background-color: #FFCC4D;
+    }
     
 }

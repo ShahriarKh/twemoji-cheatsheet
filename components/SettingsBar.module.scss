@@ -4,6 +4,7 @@
     gap: 24px;
     flex-wrap: wrap;
     width: max-content;
+    max-width: calc(100vw - 64px);
     margin: auto;
 
     background-color: #3d214b;
@@ -16,4 +17,6 @@
 
     margin-bottom: 16px;
     // flex-direction: column;
+
+    accent-color: #FFCC4D;
 }

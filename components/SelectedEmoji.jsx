@@ -2,21 +2,40 @@ import css from "./SelectedEmoji.module.scss";
 import Image from "next/image";
 import Button from "./Button";
 import { getEmojiUrl } from "../utils/getEmojiUrl";
+import { useState, useEffect } from "react";
 
 export default function SelectedEmoji({ emoji, closeFunc }) {
    
+    const [buttonText, setButtonText] = useState(`Copy ${emoji.emoji}`)
+    const [tooltipText, setTooltipText] = useState("Click to Copy")
+
     const img = getEmojiUrl(emoji.hexcode)
+
+    function copyToClipboard(val, place) {
+        navigator.clipboard.writeText(val);
+        if (place == "button") {
+            setButtonText("Copied!")
+            setTimeout(() => setButtonText(`Copy ${emoji.emoji}`), 1000)
+        } else {
+            setTooltipText("Copied!")
+            setTimeout(() => setTooltipText("Click to Copy"), 1000)
+        }
+    }
+
+    // useEffect(() => {
+    //     setButtonText(`Copy ${emoji.emoji}`)
+    // }, [emoji])
 
     return (
         <div className={css["selected"]}>
             <div className={css["col--preview"]}>
                 <Image
-                    src={`https://twemoji.maxcdn.com/v/latest/svg/${img}.svg`}
+                    src={img}
                     height="64"
                     width="64"
                     alt={emoji.emoji}
                 />
-                <Button label="Copy" />
+               
             </div>
             <div className={css["col--info"]}>
                 <header className={css["header"]}>
@@ -35,8 +54,14 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
                 </p>
                 <p>
                     <span className={css["info"]}>HEX:</span>
-                    <span className={css["hexcode"]}>{emoji.hexcode}</span>
+                    <span className={css["hexcode"]} data-tooltip={tooltipText} onClick={() => copyToClipboard(emoji.hexcode)}>{emoji.hexcode}</span>
                 </p>
+               
+            </div>
+            <div className={css["buttons"]}>
+                <Button label={buttonText} onClick={() => copyToClipboard(emoji.emoji, "button")}/>
+                <Button label="SVG" url={img} />
+                <Button label="PNG" url={getEmojiUrl(emoji.hexcode, "png")} />
             </div>
         </div>
     );

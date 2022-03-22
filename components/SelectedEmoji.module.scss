@@ -14,8 +14,8 @@
     padding: 16px 20px;
 
     display: grid;
-    grid-template-columns: 56px 1fr;
-    gap: 24px;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
     // opacity: 0.5;
 
     // &:hover {
@@ -55,7 +55,7 @@
     .info {
         font-weight: 600;
         color: #d8b7ce;
-        
+
         width: 72px;
         display: inline-block;
     }
@@ -72,10 +72,46 @@
     display: grid;
     grid-template-columns: 1fr 24px;
     width: 100%;
-    gap: 4px
+    gap: 4px;
 }
 
 .hexcode {
     font-family: "Jetbrains Mono";
     display: inline-block; // for long hexcodes
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        width: max-content;
+        height: 20px;
+        content: attr(data-tooltip);
+        display: block;
+        position: absolute;
+        background-color: #2E163B;
+        padding: 4px;
+        // z-index: 100;
+        bottom: 20px;
+        // left: 0;
+        // right: 0;
+        // margin: auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+        border-radius: 4px;
+        font-family: "Poppins";
+    }
+
+    &:hover:after {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.buttons {
+    grid-column: span 2;
+    display: flex;
+    gap: 8px;
 }

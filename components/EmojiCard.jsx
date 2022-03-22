@@ -12,7 +12,7 @@ const Twemoji = ({ emoji, size = 24, onClick }) => {
     return (
         <div className={css["card"]} onClick={onClick}>
             <Image
-                src={`https://twemoji.maxcdn.com/v/latest/svg/${image}.svg`}
+                src={image}
                 height={size}
                 width={size}
             />

@@ -11,6 +11,11 @@
     text-transform: uppercase;
     transition: all 0.1s;
 
+    // required for link
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+
     &:hover {
         // filter: opacity(0.7);
         background-color: #4c2a5c;
