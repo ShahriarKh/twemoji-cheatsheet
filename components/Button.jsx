@@ -1,8 +1,8 @@
 import css from './Button.module.scss'
 
-export default function Button({ func, label }) {
+export default function Button({ onClick, label }) {
     return (
-        <button onClick={func} className={css["button"]}>
+        <button onClick={onClick} className={css["button"]}>
             {label}
         </button>
     )

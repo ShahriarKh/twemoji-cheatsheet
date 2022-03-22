@@ -1,24 +1,57 @@
 .box {
-    background-color: red;
+    // background-color: red;
     position: relative;
+    width: 120px;
     
 }
 
+$rad: 8px;
+
 .selector {
-    background-color: orange;
+    background-color:#FFCC4D;
     width: 100%;
     cursor: pointer;
+    font-weight: 700;
+    height: 40px;
+    border-radius: $rad;
+    text-transform: capitalize;
 }
 
 .menu {
     position: absolute;
     width: 100%;
+    // left: -48px;
     display: flex;
     flex-direction: column;
     z-index: 1000;
     cursor: pointer;
+    margin: 8px 0;
+    border-radius: $rad;
+
+    // &:hover {
+        button {
+            &:hover {
+            background-color: red;
+            }
+        }
+    // }
 }
 
 .menu__item {
     cursor: pointer;
+    text-transform: capitalize;
+    padding: 4px;
+
+    &:first-child {
+        border-radius: $rad $rad 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 $rad $rad;
+    }
+
+    // &:hover {
+    //     background-color: yellow;
+    // }
+    
 }

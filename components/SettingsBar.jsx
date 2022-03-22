@@ -33,11 +33,12 @@ export default function SettingsBar({
                 {sizeSlider}
             </div>
             <div>
-                <h3>Category</h3>
+                <h3>Groups</h3>
                 <Dropdown
                     onChangeFunc={filterByGroup}
                     items={groupFilters}
                     onClearFunc={() => filterByGroup(null)}
+                    name="Groups"
                 />
             </div>
             <div>
@@ -46,6 +47,7 @@ export default function SettingsBar({
                     onChangeFunc={filterByVersion}
                     items={versionFilters}
                     onClearFunc={() => filterByVersion(null)}
+                    name="Versions"
                 />
             </div>
             {/* <div>
