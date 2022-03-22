@@ -1,0 +1,16 @@
+.bar {
+    display: flex;
+    justify-content: space-evenly;
+    // width: max-content;
+
+    background-color: #3d214b;
+    padding: 24px 32px;
+    border-radius: 24px;
+
+    h3 {
+        color: #d8b7ce
+    }
+
+    margin-bottom: 16px;
+    // flex-direction: column;
+}

@@ -1,0 +1,24 @@
+.box {
+    background-color: red;
+    position: relative;
+    
+}
+
+.selector {
+    background-color: orange;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.menu__item {
+    cursor: pointer;
+}

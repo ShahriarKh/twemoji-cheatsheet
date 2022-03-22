@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "downshift": "^6.1.7",
     "emojibase-data": "^7.0.1",
     "next": "12.1.0",
     "react": "17.0.2",
