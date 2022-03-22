@@ -1,9 +1,11 @@
 import css from "./SelectedEmoji.module.scss";
 import Image from "next/image";
 import Button from "./Button";
+import { getEmojiUrl } from "../utils/getEmojiUrl";
 
 export default function SelectedEmoji({ emoji, closeFunc }) {
-    const img = emoji.hexcode.toLowerCase();
+   
+    const img = getEmojiUrl(emoji.hexcode)
 
     return (
         <div className={css["selected"]}>
@@ -36,7 +38,6 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
                     <span className={css["hexcode"]}>{emoji.hexcode}</span>
                 </p>
             </div>
-            {/* {JSON.stringify(emoji)} */}
         </div>
     );
 }
