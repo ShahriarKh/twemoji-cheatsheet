@@ -10,7 +10,7 @@ const Twemoji = ({ emoji, size = 24, onClick }) => {
 
     return (
         <div
-            tabindex="0"
+            tabIndex="0"
             className={css["card"]}
             onClick={onClick}
             onKeyUp={(e) => {

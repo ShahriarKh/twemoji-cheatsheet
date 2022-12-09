@@ -25,7 +25,7 @@ export default function SearchBox({ setAvailabeEmojis, emojis }) {
     useEffect(() => {
         const timeout = setTimeout(() => handleSearch(query), 200);
         return () => clearTimeout(timeout);
-    }, [query]);
+    }, [query, handleSearch]);
 
     return (
         <input
