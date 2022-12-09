@@ -8,6 +8,7 @@
     justify-content: center;
     column-gap: 40px;
     margin-top: 16px;
+    flex-wrap: wrap;
 
     color: $pink;
 
@@ -15,12 +16,14 @@
         color: $light-purple;
     }
 
-    a {
-        transition: color 0.1s;
+    p > a {
+        transition: all 0.1s;
         color: $yellow;
+        outline: none;
+        border-bottom: solid 2px transparent;
 
-        &:hover {
-            color: $dark-yellow;
+        &:hover, &:focus     {
+            border-bottom-color: $yellow;
         }
     }
 }
