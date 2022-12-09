@@ -1,14 +1,14 @@
+@use "styles/colors" as *;
+
 .box {
-    // background-color: red;
     position: relative;
     width: 120px;
-    
 }
 
 $rad: 8px;
 
 .selector {
-    background-color:#FFCC4D;
+    background-color: $yellow;
     width: 100%;
     cursor: pointer;
     font-weight: 700;
@@ -17,9 +17,14 @@ $rad: 8px;
     text-transform: capitalize;
     margin-bottom: 8px;
     transition: all 0.1s;
+    outline: solid 3px transparent;
 
     &:hover {
         opacity: 0.8;
+    }
+
+    &:focus {
+        outline-color: $dark-yellow;
     }
 }
 
@@ -32,9 +37,9 @@ $rad: 8px;
     z-index: 1000;
     cursor: pointer;
     border-radius: $rad;
-    box-shadow: 0px 1px 4px 2px #1d0a36cc;
+    box-shadow: 0px 1px 4px 2px $darkest-purple;
     left: 50%;
-        transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 
 .menu__item {
@@ -42,14 +47,10 @@ $rad: 8px;
     text-transform: capitalize;
     padding: 8px 16px;
     font-weight: 600;
-    border-bottom: solid 2px #664268;
-    background-color: #724985;
+    border-bottom: solid 2px $another-purple;
+    background-color: $lightest-purple;
     color: white;
     transition: all 0.1s;
-
-    // &:nth-child(2n) {
-        // background-color: rgb(224, 224, 224);
-    // }
 
     &:first-child {
         border-radius: $rad $rad 0 0;
@@ -59,9 +60,8 @@ $rad: 8px;
         border-radius: 0 0 $rad $rad;
     }
 
-    &:hover {
-        background-color: #FFCC4D;
+    &:hover, &:focus {
+        background-color: $yellow;
         color: black;
     }
-    
 }

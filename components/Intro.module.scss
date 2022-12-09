@@ -1,3 +1,5 @@
+@use "styles/colors" as *;
+
 .intro {
     text-align: center;
     font-weight: 600;
@@ -13,6 +15,6 @@
     }
 
     a {
-        color: #FFCC4D
+        color: $yellow
     }
 }

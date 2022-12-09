@@ -1,22 +1,17 @@
+@use "styles/colors" as *;
+
 .card {
-    // width: 40px;
     padding: 16px;
     border-radius: 40%;
     cursor: pointer;
-    // background-color: rgba(255, 255, 255, 0.089);
-    background-color: rgb(61, 33, 75);
+    background-color: $purple;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    // box-shadow: 0 2px 4px 0px rgba(77, 41, 101, 0.2);
-
-    // transition: all 0.3 ease-in-out;
     transition: all 0.1s ease-in-out;
 
-    &:hover {
-        
+    &:hover {        
         transform: scale(1.1);
     }
 }

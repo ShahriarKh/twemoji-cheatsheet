@@ -1,3 +1,5 @@
+@use "styles/colors" as *;
+
 .bar {
     display: flex;
     justify-content: space-evenly;
@@ -7,7 +9,7 @@
     max-width: 90%;
     margin: 32px auto 32px;
 
-    background-color: #3d214b;
+    background-color: $purple;
     padding: 16px 32px;
     border-radius: 32px;
 
@@ -15,5 +17,5 @@
         margin-bottom: 8px;
     }
 
-    accent-color: #FFCC4D;
+    accent-color: $yellow;
 }

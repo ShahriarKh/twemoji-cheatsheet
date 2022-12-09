@@ -1,3 +1,5 @@
+@use "styles/colors" as *;
+
 .selected {
     position: fixed;
     // top: 0;
@@ -6,21 +8,16 @@
     min-height: 120px;
     width: 320px;
     max-width: calc(100vw - 64px);
-    background-color: #724985;
+    background-color: $light-purple;
     color: white;
     z-index: 1000;
     border-radius: 16px;
-    box-shadow: 0px 1px 4px 2px #1d0a36cc;
+    box-shadow: 0px 1px 4px 2px $darkest-purple;
     padding: 16px 20px;
 
     display: grid;
     grid-template-columns: 64px 1fr;
     gap: 20px;
-    // opacity: 0.5;
-
-    // &:hover {
-    //     opacity: 1;
-    // }
 }
 
 .close {
@@ -28,14 +25,14 @@
     width: 24px;
     height: 24px;
     font-size: 24px;
-    background-color: #2e163b;
+    background-color: $dark-purple;
     text-align: center;
     line-height: 24px;
     font-weight: 600;
     border-radius: 50%;
 
     &:hover {
-        background-color: #4c2a5c;
+        background-color: $light-purple;
     }
 }
 
@@ -54,7 +51,7 @@
 
     .info {
         font-weight: 600;
-        color: #d8b7ce;
+        color: $pink;
 
         width: 72px;
         display: inline-block;
@@ -76,7 +73,7 @@
 }
 
 .hexcode {
-    font-family: "Jetbrains Mono";
+    font-family: "Jetbrains Mono", "Consolas", monospace;
     display: inline-block; // for long hexcodes
     cursor: pointer;
     position: relative;
@@ -90,13 +87,9 @@
         content: attr(data-tooltip);
         display: block;
         position: absolute;
-        background-color: #2E163B;
+        background-color: $dark-purple;
         padding: 4px;
-        // z-index: 100;
         bottom: 20px;
-        // left: 0;
-        // right: 0;
-        // margin: auto;
         left: 50%;
         transform: translate(-50%, 0);
         text-align: center;

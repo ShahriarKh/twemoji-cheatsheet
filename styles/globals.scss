@@ -1,3 +1,4 @@
+@use "colors" as *;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400&display=swap');
 
 * {
@@ -8,7 +9,7 @@
 }
 
 html, body, #__next {
-  background-color: rgb(46, 22, 59);
+  background-color: $dark-purple;
 }
 
 html {
@@ -16,7 +17,6 @@ html {
 }
 
 main {
-  // background-color: white;
   color: white;
   position: relative;
   padding: 24px 10%;
