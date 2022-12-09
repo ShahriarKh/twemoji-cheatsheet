@@ -22,7 +22,8 @@
         outline: none;
         border-bottom: solid 2px transparent;
 
-        &:hover, &:focus     {
+        &:hover,
+        &:focus {
             border-bottom-color: $yellow;
         }
     }

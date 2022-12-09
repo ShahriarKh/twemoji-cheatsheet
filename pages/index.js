@@ -32,6 +32,22 @@ export default function Home(props) {
         <>
             <Head>
                 <title>Twemoji Cheatsheet</title>
+                <meta
+                    name="description"
+                    content="🥪 A super simple cheatsheet to browse Twemojis! Filter by catgeroy (and, or) version and find the emoji you want. Easily grab the unicode, hexcode, download SVG or PNG and get some info about that emoji."
+                />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                <meta property="og:title" content="Twemoji Cheatsheet" />
+                <meta
+                    property="og:description"
+                    content="🥪 A super simple cheatsheet to browse Twemojis! Filter by catgeroy (and, or) version and find the emoji you want. Easily grab the unicode, hexcode, download SVG or PNG and get some info about that emoji."
+                />
+                <meta
+                    property="og:image"
+                    content="https://user-images.githubusercontent.com/31452340/159780805-2e2b146d-5c50-4245-ba6b-9cc7dcdd9a18.png"
+                />
             </Head>
 
             <main>
@@ -55,8 +71,6 @@ export default function Home(props) {
                         />
                     }
                 />
-
-                {/* <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis}/> */}
 
                 <Grid>
                     {availableEmojis

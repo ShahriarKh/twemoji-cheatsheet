@@ -11,6 +11,7 @@
     text-align: center;
     // grid-column: 1 / span 3;
     flex-grow: 3;
+    max-width: 100%;
 
     &:focus {
         outline-color: $yellow;
@@ -19,5 +20,6 @@
     &::placeholder {
         font-weight: 400;
         font-style: italic;
+        color: $pink;
     }
 }
