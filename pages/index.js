@@ -7,7 +7,7 @@ import SelectedEmoji from "../components/SelectedEmoji";
 import SettingsBar from "../components/SettingsBar";
 import Intro from "../components/Intro";
 import SearchBox from "../components/SearchBox";
-
+import Footer from "../components/Footer";
 
 export default function Home(props) {
     const [emojiSize, setEmojiSize] = useState(40);
@@ -29,7 +29,7 @@ export default function Home(props) {
     versions.sort((a, b) => b - a);
 
     return (
-        <div>
+        <>
             <Head>
                 <title>Twemoji Cheatsheet</title>
             </Head>
@@ -42,6 +42,8 @@ export default function Home(props) {
                     filterByVersion={setSelectedVersion}
                     filterByGroup={setSelectedGroup}
                     versions={versions}
+                    setAvailabeEmojis={setAvailabeEmojis}
+                    emojis={emojis}
                     sizeSlider={
                         <input
                             type="range"
@@ -54,7 +56,7 @@ export default function Home(props) {
                     }
                 />
 
-                <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis}/>
+                {/* <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis}/> */}
 
                 <Grid>
                     {availableEmojis
@@ -73,11 +75,12 @@ export default function Home(props) {
                                 />
                             );
                         })}
-                        {availableEmojis.length == 0 && <p>Nothing found 😑</p>}
+                    {availableEmojis.length == 0 && <p>Nothing found 😑</p>}
                 </Grid>
 
                 {selectedEmoji && <SelectedEmoji emoji={selectedEmoji} closeFunc={closeSelectedEmojiCard} />}
             </main>
-        </div>
+            <Footer />
+        </>
     );
 }

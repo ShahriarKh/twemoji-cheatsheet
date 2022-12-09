@@ -3,16 +3,16 @@ import css from "./SettingsBar.module.scss";
 // import { groups, subgroups } from "emojibase-data/meta/groups.json";
 import data from "emojibase-data/en/messages.json";
 import Dropdown from "./Dropdown";
+import SearchBox from "./SearchBox";
 
 export default function SettingsBar({
-    // totalEmojis,
-    // removeGroupFilter,
     filterByGroup,
     filterByVersion,
     sizeSlider,
     versions,
-})
- {
+    setAvailabeEmojis,
+    emojis,
+}) {
     const groupFilters = data.groups.map(({ message, order, ...rest }) => ({
         label: message,
         val: order.toString(),
@@ -28,7 +28,8 @@ export default function SettingsBar({
             {/* <div>
                 <h3>Skin Tone</h3>
             </div> */}
-            
+            <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis} />
+
             <div>
                 <h3>Groups</h3>
                 <Dropdown
@@ -51,6 +52,7 @@ export default function SettingsBar({
                 <h3>Size</h3>
                 {sizeSlider}
             </div>
+
             {/* <div>
                 <h3>Info</h3>
                 <p>Total Emojis: {totalEmojis} </p>

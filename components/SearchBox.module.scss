@@ -1,0 +1,23 @@
+@use "styles/colors" as *;
+
+.input {
+    background-color: $purple;
+    color: white;
+    border: none;
+    padding: 8px;
+    outline: solid 2px transparent;
+    border-radius: 20px;
+    font-size: 18px;
+    text-align: center;
+    // grid-column: 1 / span 3;
+    flex-grow: 3;
+
+    &:focus {
+        outline-color: $yellow;
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        font-style: italic;
+    }
+}

@@ -40,14 +40,13 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
             <div className={css["col--info"]}>
                 <header className={css["header"]}>
                     <h4 className={css["title"]}>{emoji.label}</h4>
-                    <span className={css["close"]} onClick={closeFunc}>
+                    <button className={css["close"]} onClick={closeFunc} role="button">
                         ×
-                    </span>
+                    </button>
                 </header>
                 <p>
                     <span className={css["info"]}>Unicode:</span>{emoji.emoji}
                 </p>
-                {/* <p>Hex: {emoji.hexcode}</p> */}
                 {/* <p>{emoji.tags.join(", ")}</p> */}
                 <p>
                     <span className={css["info"]}>Since:</span>Version {emoji.version}

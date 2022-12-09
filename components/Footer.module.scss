@@ -1,0 +1,26 @@
+@use "styles/colors" as *;
+
+.footer {
+    background-color: $darkest-purple;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    margin-top: 16px;
+
+    color: $pink;
+
+    span {
+        color: $light-purple;
+    }
+
+    a {
+        transition: color 0.1s;
+        color: $yellow;
+
+        &:hover {
+            color: $dark-yellow;
+        }
+    }
+}

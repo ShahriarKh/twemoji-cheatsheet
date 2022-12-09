@@ -10,8 +10,13 @@
     align-items: center;
     justify-content: center;
     transition: all 0.1s ease-in-out;
+    outline: solid 3px transparent;
 
     &:hover {        
         transform: scale(1.1);
+    }
+
+    &:focus {
+        outline-color: $yellow;
     }
 }

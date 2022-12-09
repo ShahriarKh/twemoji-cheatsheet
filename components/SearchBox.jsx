@@ -28,8 +28,10 @@ export default function SearchBox({ setAvailabeEmojis, emojis }) {
     }, [query]);
 
     return (
-        <div>
-            <input onChange={(e) => setQuery(e.target.value)} />
-        </div>
+        <input
+            className={css.input}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="search: name, tags, hexcode, emoticon"
+        />
     );
 }

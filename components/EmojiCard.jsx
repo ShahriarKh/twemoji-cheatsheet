@@ -6,17 +6,21 @@ import { getEmojiUrl } from "../utils/getEmojiUrl";
 // https://gist.github.com/chibicode/fe195d792270910226c928b69a468206?permalink_comment_id=3650172#gistcomment-3650172
 
 const Twemoji = ({ emoji, size = 24, onClick }) => {
-    
-    const image = getEmojiUrl(emoji.hexcode)
+    const image = getEmojiUrl(emoji.hexcode);
 
     return (
-        <div className={css["card"]} onClick={onClick}>
-            <Image
-                src={image}
-                height={size}
-                width={size}
-                alt={emoji.emoji}
-            />
+        <div
+            tabindex="0"
+            className={css["card"]}
+            onClick={onClick}
+            onKeyUp={(e) => {
+                e.preventDefault();
+                if (e.key === "Enter") {
+                    onClick();
+                }
+            }}
+        >
+            <Image src={image} height={size} width={size} alt={emoji.emoji} />
         </div>
     );
 };

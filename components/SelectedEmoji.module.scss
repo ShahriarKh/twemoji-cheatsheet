@@ -30,9 +30,16 @@
     line-height: 24px;
     font-weight: 600;
     border-radius: 50%;
+    outline: solid 2px transparent;
+    margin: 4px 4px 0 0;
+    color: white;
 
     &:hover {
-        background-color: $light-purple;
+        background-color: $darkest-purple;
+    }
+
+    &:focus {
+        outline-color: $dark-yellow;
     }
 }
 
@@ -67,7 +74,7 @@
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 24px;
+    grid-template-columns: 1fr 26px;
     width: 100%;
     gap: 4px;
 }
