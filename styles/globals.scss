@@ -11,11 +11,16 @@ html, body, #__next {
   background-color: rgb(46, 22, 59);
 }
 
+html {
+  overflow-y: scroll;
+}
+
 main {
   // background-color: white;
   color: white;
   position: relative;
   padding: 24px 10%;
+  
 }
 
 a {
