@@ -34,7 +34,7 @@ export default function Home(props) {
                 <title>Twemoji Cheatsheet</title>
                 <meta
                     name="description"
-                    content="🥪 A super simple cheatsheet to browse Twemojis! Filter by catgeroy (and, or) version and find the emoji you want. Easily grab the unicode, hexcode, download SVG or PNG and get some info about that emoji."
+                    content="🥪 A super simple cheatsheet to browse Twemojis! Search by name or filter by category (and, or) version and find the emoji you want. Easily grab the unicode, hexcode, download SVG or PNG and get some info about that emoji. "
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,7 +42,7 @@ export default function Home(props) {
                 <meta property="og:title" content="Twemoji Cheatsheet" />
                 <meta
                     property="og:description"
-                    content="🥪 A super simple cheatsheet to browse Twemojis! Filter by catgeroy (and, or) version and find the emoji you want. Easily grab the unicode, hexcode, download SVG or PNG and get some info about that emoji."
+                    content="🥪 A super simple cheatsheet to browse Twemojis! Search by name or filter by category (and, or) version and find the emoji you want. Easily grab the unicode, hexcode, download SVG or PNG and get some info about that emoji. "
                 />
                 <meta
                     property="og:image"
