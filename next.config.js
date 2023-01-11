@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['twemoji.maxcdn.com'],
+    domains: ['cdn.jsdelivr.net'],
   },
 }
 

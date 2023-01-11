@@ -22,7 +22,7 @@ export function getEmojiUrl(hexcode, format = "svg") {
         folder = "72x72"
     }
 
-    url = `https://twemoji.maxcdn.com/v/latest/${folder}/${code}.${format}`
+    url = `https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/${folder}/${code}.${format}`
 
     return url;
 }
