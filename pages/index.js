@@ -63,6 +63,7 @@ export default function Home(props) {
                     sizeSlider={
                         <input
                             type="range"
+                            aria-label="Size"
                             min="16"
                             max="72"
                             // step="4"
