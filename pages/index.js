@@ -35,6 +35,7 @@ export default function Home(props) {
         <>
             <Head>
                 <title>Twemoji Cheatsheet</title>
+                <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥪</text></svg>"></link>
                 <meta
                     name="description"
                     content="🥪 A super simple cheatsheet to browse Twemojis! Search by name or filter by category (and, or) version and find the emoji you want. Easily grab the unicode, hexcode, download SVG or PNG and get some info about that emoji. "
@@ -97,6 +98,7 @@ export default function Home(props) {
                 {selectedEmoji && (
                     <SelectedEmoji
                         emoji={selectedEmoji}
+                        skinTone={selectedSkinTone}
                         closeFunc={closeSelectedEmojiCard}
                     />
                 )}

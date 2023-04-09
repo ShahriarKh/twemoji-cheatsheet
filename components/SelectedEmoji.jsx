@@ -4,12 +4,12 @@ import Button from "./Button";
 import { getEmojiUrl } from "../utils/getEmojiUrl";
 import { useState, useEffect } from "react";
 
-export default function SelectedEmoji({ emoji, closeFunc }) {
+export default function SelectedEmoji({ emoji, skinTone, closeFunc }) {
    
     const [buttonText, setButtonText] = useState(`Copy`)
     const [tooltipText, setTooltipText] = useState("Click to Copy")
 
-    const img = getEmojiUrl(emoji.hexcode)
+    const img = getEmojiUrl(emoji, skinTone)
 
     function copyToClipboard(val, place) {
         navigator.clipboard.writeText(val);
@@ -56,7 +56,7 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
             <div className={css["buttons"]}>
                 <Button label={buttonText} onClick={() => copyToClipboard(emoji.emoji, "button")}/>
                 <Button label="SVG" url={img} />
-                <Button label="PNG" url={getEmojiUrl(emoji.hexcode, "png")} />
+                <Button label="PNG" url={getEmojiUrl(emoji, skinTone, "png")} />
             </div>
         </div>
     );

@@ -55,7 +55,7 @@
 .col--info {
     height: 100%;
     overflow: clip;
-    font-size: 14px;
+    font-size: 0.9em;
 
     .info {
         font-weight: 600;
@@ -85,16 +85,16 @@
     position: relative;
 
     &::after {
-        transition: all 0.3s ease-in-out;
         opacity: 0;
         visibility: hidden;
         width: max-content;
-        height: 20px;
         content: attr(data-tooltip);
         display: block;
         position: absolute;
-        background-color: var(--color4);
-        padding: 4px;
+        background-color: var(--yellow);
+        color: black;
+        font-size: 0.8em;
+        padding: 0 2px;
         bottom: 20px;
         left: 50%;
         transform: translate(-50%, 0);

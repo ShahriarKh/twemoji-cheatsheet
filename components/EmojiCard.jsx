@@ -6,15 +6,6 @@ import { getEmojiUrl } from "../utils/getEmojiUrl";
 // https://gist.github.com/chibicode/fe195d792270910226c928b69a468206?permalink_comment_id=3650172#gistcomment-3650172
 
 const Twemoji = ({ emoji, size = 24, onClick, skinTone }) => {
-    let hex = emoji.hexcode;
-
-    if (skinTone && emoji.skins) {
-        hex = emoji.skins.filter((skin) => skin.hexcode.includes(skinTone))[0]
-            .hexcode;
-    }
-
-    let image = getEmojiUrl(hex);
-
     return (
         <div
             tabIndex="0"
@@ -27,7 +18,7 @@ const Twemoji = ({ emoji, size = 24, onClick, skinTone }) => {
                 }
             }}
         >
-            <Image src={image} height={size} width={size} alt={emoji.emoji} />
+            <Image src={getEmojiUrl(emoji, skinTone)} height={size} width={size} alt={emoji.emoji} />
         </div>
     );
 };
