@@ -44,6 +44,8 @@ export default function SettingsBar({
 
     return (
         <div className={css["bar"]}>
+            <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis} />
+
             <div className={css["buttons"]}>
                 <Dropdown
                     onChangeFunc={filterByGroup}
@@ -78,8 +80,6 @@ export default function SettingsBar({
                     onChange={(e) => setEmojiSize(e.target.value)}
                 />
             </div>
-
-            <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis} />
 
             {/* <div>
                 <h3>Info</h3>

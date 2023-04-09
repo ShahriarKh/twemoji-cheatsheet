@@ -13,7 +13,6 @@ export default function Header() {
                 </a>{" "}
                 Repo
             </p>
-            {/* <span>|</span> */}
             <p>
                 Created by{" "}
                 <a
@@ -25,7 +24,6 @@ export default function Header() {
                     Shahriar Khalvati
                 </a>
             </p>
-            {/* <span>|</span> */}
             <p>
                 Emojis by Twitter&apos;s{" "}
                 <a

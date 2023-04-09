@@ -1,5 +1,5 @@
 import Downshift from "downshift";
-import Button from "./Button"
+import Button from "./Button";
 import css from "./Dropdown.module.scss";
 
 export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
@@ -26,9 +26,10 @@ export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
                         aria-haspopup="true"
                         aria-expanded={isOpen}
                     >
-                        {selectedItem ? selectedItem.label : name}<span>🔽</span>
+                        {selectedItem ? selectedItem.label : name}
+                        <span>🔽</span>
                     </button>
-                    
+
                     {isOpen ? (
                         <div className={css["menu"]}>
                             {items.map((item) => (
@@ -42,7 +43,13 @@ export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
                             ))}
                         </div>
                     ) : null}
-                    {selectedItem && onClearFunc && <Button onClick={() => clearSelection()} label="Reset" />}
+                    {selectedItem && onClearFunc && (
+                        <Button
+                            className={css["reset"]}
+                            onClick={() => clearSelection()}
+                            label="Reset"
+                        />
+                    )}
                 </div>
             )}
         </Downshift>

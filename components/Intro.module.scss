@@ -3,14 +3,10 @@
 .intro {
     text-align: center;
     font-weight: 600;
-    margin-top: 24px;
+    margin: 24px;
 
     h1 {
-        font-size: 36px;
+        font-size: 3em;
         color: var(--text);
-    }
-
-    a {
-        color: $yellow
     }
 }

@@ -22,10 +22,6 @@ export default function SelectedEmoji({ emoji, closeFunc }) {
         }
     }
 
-    // useEffect(() => {
-    //     setButtonText(`Copy ${emoji.emoji}`)
-    // }, [emoji])
-
     return (
         <div className={css["selected"]}>
             <div className={css["col--preview"]}>

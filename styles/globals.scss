@@ -6,14 +6,14 @@
     padding: 0;
     margin: 0;
     font-family: "Poppins";
-    transition: all 0.1s !important;
+    transition: all 0.1s ease-in-out !important;   
 }
 
 [data-theme="purple"] {
     --bg: hsl(280, 37%, 30%);
     --nav: hsl(280, 37%, 25%);
     --box: hsl(280, 37%, 25%);
-    --input: hsl(280, 37%, 20%);
+    --input: hsl(280, 37%, 25%);
     --button: hsl(280, 37%, 20%);
     --shadow: hsla(280, 37%, 10%, 70%);
     --text: #f8ecf4;
@@ -24,7 +24,7 @@
     --bg: hsl(0, 0%, 5%);
     --nav: hsl(0, 0%, 10%);
     --box: hsl(0, 0%, 10%);
-    --input: hsl(0, 0%, 15%);
+    --input: hsl(0, 0%, 10%);
     --button: hsl(0, 0%, 15%);
     --shadow: hsla(0, 0%, 0%, 100%);
     --text: hsl(0, 0%, 100%);
@@ -35,7 +35,7 @@
     --bg: hsl(43, 30%, 100%);
     --nav: hsl(43, 30%, 95%);
     --box: hsl(43, 31%, 95%);
-    --input: hsl(43, 30%, 90%);
+    --input: hsl(43, 30%, 95%);
     --button: hsl(43, 30%, 90%);
     --shadow: hsla(0, 0%, 40%, 40%);
     --text: hsl(0, 0%, 15%);
@@ -46,6 +46,8 @@ html,
 body,
 #__next {
     background-color: var(--bg);
+    color: var(--text);
+    accent-color: $yellow;
 }
 
 html {
@@ -53,7 +55,6 @@ html {
 }
 
 main {
-    color: white;
     position: relative;
     padding: 24px 10%;
     min-height: calc(100vh - 89px);

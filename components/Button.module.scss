@@ -2,17 +2,21 @@
 
 .button {
     width: 100%;
-    height: 32px;
+    height: 2.5em;
     border-radius: 8px;
     outline: solid 2px transparent;
-    font-size: 1em;
-    text-align: center;
-    line-height: 2;
-    color: var(--text);
-    background-color: var(--button);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    color: black;
+    background-color: $yellow;
     cursor: pointer;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: capitalize;
 
     &:hover {
         opacity: 0.6;
