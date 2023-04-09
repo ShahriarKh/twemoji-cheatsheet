@@ -6,8 +6,8 @@ import { useState } from "react";
 import SelectedEmoji from "../components/SelectedEmoji";
 import SettingsBar from "../components/SettingsBar";
 import Intro from "../components/Intro";
-import SearchBox from "../components/SearchBox";
 import Footer from "../components/Footer";
+import { useAppSettings } from "../utils/store";
 
 export default function Home(props) {
     const [emojiSize, setEmojiSize] = useState(40);
@@ -27,6 +27,8 @@ export default function Home(props) {
 
     const versions = [...new Set(emojis.map((emoji) => emoji.version))];
     versions.sort((a, b) => b - a);
+
+    const selectedSkinTone = useAppSettings(state => state.skinTone)
 
     return (
         <>
@@ -87,6 +89,7 @@ export default function Home(props) {
                                     key={emoji.emoji}
                                     emoji={emoji}
                                     onClick={() => setSelectedEmoji(emoji)}
+                                    skinTone={selectedSkinTone}
                                 />
                             );
                         })}

@@ -11,16 +11,11 @@ export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
             }}
         >
             {({
-                // getLabelProps,
-                // getInputProps,
-                // getButtonProps,
                 getItemProps,
                 isOpen,
                 toggleMenu,
                 clearSelection,
                 selectedItem,
-                // inputValue,
-                // highlightedIndex,
             }) => (
                 <div className={css["box"]}>
                     <button
@@ -31,7 +26,7 @@ export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
                         aria-haspopup="true"
                         aria-expanded={isOpen}
                     >
-                        {selectedItem ? selectedItem.label : `All ${name}`}
+                        {selectedItem ? selectedItem.label : name}
                     </button>
                     
                     {isOpen ? (
