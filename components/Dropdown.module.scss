@@ -13,12 +13,17 @@ $rad: 8px;
     width: 100%;
     cursor: pointer;
     font-weight: 700;
-    height: 40px;
+    min-height: 40px;
     border-radius: $rad;
     text-transform: capitalize;
     margin-bottom: 8px;
     transition: all 0.1s;
     outline: solid 3px transparent;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 8px;
 
     &:hover {
         opacity: 0.8;

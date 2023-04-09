@@ -23,6 +23,10 @@ main {
     position: relative;
     padding: 24px 10%;
     min-height: calc(100vh - 89px);
+
+    @media screen and (max-width: 960px) {
+        padding: 24px 5%;
+    }
 }
 
 a {

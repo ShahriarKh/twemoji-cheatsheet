@@ -26,7 +26,7 @@ export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
                         aria-haspopup="true"
                         aria-expanded={isOpen}
                     >
-                        {selectedItem ? selectedItem.label : name}
+                        {selectedItem ? selectedItem.label : name}<span>🔽</span>
                     </button>
                     
                     {isOpen ? (
@@ -42,7 +42,7 @@ export default function Dropdown({ onChangeFunc, onClearFunc, items, name }) {
                             ))}
                         </div>
                     ) : null}
-                    {selectedItem && <Button onClick={() => clearSelection()} label="Reset" />}
+                    {selectedItem && onClearFunc && <Button onClick={() => clearSelection()} label="Reset" />}
                 </div>
             )}
         </Downshift>

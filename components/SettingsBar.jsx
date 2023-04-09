@@ -24,50 +24,63 @@ export default function SettingsBar({
     });
 
     const skinToneFilters = [
-        {label: '🏿 dark', val: '1F3FF'},
-        {label: '🏾 medium dark', val: '1F3FE'},
-        {label: '🏽 medium', val: '1F3FD'},
-        {label: '🏼 medium light', val: '1F3FC'},
-        {label: '🏻 light', val: '1F3FB'},
-    ]
+        { label: "🏿 dark", val: "1F3FF" },
+        { label: "🏾 medium dark", val: "1F3FE" },
+        { label: "🏽 medium", val: "1F3FD" },
+        { label: "🏼 medium light", val: "1F3FC" },
+        { label: "🏻 light", val: "1F3FB" },
+    ];
 
-    const setSkinTone = useAppSettings(state => state.setSkinTone)
+    const themes = [
+        { label: "🟪 purple", val: "purple" },
+        { label: "⬛ black", val: "black" },
+        { label: "⬜ white", val: "white" },
+    ];
+
+    const setSkinTone = useAppSettings((state) => state.setSkinTone);
+    const setTheme = useAppSettings((state) => state.setTheme);
+    const setEmojiSize = useAppSettings((state) => state.setEmojiSize);
+    const emojiSize = useAppSettings((state) => state.emojiSize);
 
     return (
         <div className={css["bar"]}>
-            <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis} />
-
-            <div>
-                <h3>Groups</h3>
+            <div className={css["buttons"]}>
                 <Dropdown
                     onChangeFunc={filterByGroup}
                     items={groupFilters}
                     onClearFunc={() => filterByGroup(null)}
                     name="All Groups"
                 />
-            </div>
-            <div>
-                <h3>Version</h3>
                 <Dropdown
                     onChangeFunc={filterByVersion}
                     items={versionFilters}
                     onClearFunc={() => filterByVersion(null)}
                     name="All Versions"
                 />
-            </div>
-            <div>
-                <h3>Skin Tone</h3>
                 <Dropdown
                     onChangeFunc={setSkinTone}
                     items={skinToneFilters}
-                    onClearFunc={() => setSkinTone('')}
+                    onClearFunc={() => setSkinTone("")}
                     name="Skin Tones"
                 />
+                <Dropdown
+                    onChangeFunc={setTheme}
+                    items={themes}
+                    // onClearFunc={() => set('')}
+                    name="🟪 Purple"
+                />
+
+                <input
+                    type="range"
+                    aria-label="Size"
+                    min="16"
+                    max="72"
+                    value={emojiSize}
+                    onChange={(e) => setEmojiSize(e.target.value)}
+                />
             </div>
-            <div>
-                <h3>Size</h3>
-                {sizeSlider}
-            </div>
+
+            <SearchBox setAvailabeEmojis={setAvailabeEmojis} emojis={emojis} />
 
             {/* <div>
                 <h3>Info</h3>

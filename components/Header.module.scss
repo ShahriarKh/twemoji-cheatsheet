@@ -1,19 +1,25 @@
 @use "styles/colors" as *;
 
-.footer {
+.header {
     background-color: $darkest-purple;
-    padding: 24px;
+    padding: 6px 10%;
+    gap: 8px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 40px;
-    margin-top: 16px;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     color: $pink;
 
     span {
         color: $light-purple;
+    }
+
+    p {
+        text-align: center;
+        flex: 1 1 240px;
+        background-color: rgba(0,0,0,0.1);
+        padding: 6px;
+        border-radius: 12px;
     }
 
     p > a {

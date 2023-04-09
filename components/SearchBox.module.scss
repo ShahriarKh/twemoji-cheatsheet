@@ -6,12 +6,11 @@
     border: none;
     padding: 8px;
     outline: solid 2px transparent;
-    border-radius: 20px;
-    font-size: 18px;
+    border-radius: 12px;
     text-align: center;
-    // grid-column: 1 / span 3;
-    flex-grow: 3;
-    max-width: 100%;
+    max-width: 736px;
+    width: 100%;
+    margin: auto;
 
     &:focus {
         outline-color: $yellow;
