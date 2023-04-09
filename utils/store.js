@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 export const useAppSettings = create((set) => ({
-    theme: "purple",
+    theme: "black",
     skinTone: "",
     emojiSize: "32",
     setTheme: (color) => set({ theme: color }),

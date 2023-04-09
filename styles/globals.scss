@@ -6,12 +6,46 @@
     padding: 0;
     margin: 0;
     font-family: "Poppins";
+    transition: all 0.1s !important;
+}
+
+[data-theme="purple"] {
+    --bg: hsl(280, 37%, 30%);
+    --nav: hsl(280, 37%, 25%);
+    --box: hsl(280, 37%, 25%);
+    --input: hsl(280, 37%, 20%);
+    --button: hsl(280, 37%, 20%);
+    --shadow: hsla(280, 37%, 10%, 70%);
+    --text: #f8ecf4;
+    --yellow: #{$yellow};
+}
+
+[data-theme="black"] {
+    --bg: hsl(0, 0%, 5%);
+    --nav: hsl(0, 0%, 10%);
+    --box: hsl(0, 0%, 10%);
+    --input: hsl(0, 0%, 15%);
+    --button: hsl(0, 0%, 15%);
+    --shadow: hsla(0, 0%, 0%, 100%);
+    --text: hsl(0, 0%, 100%);
+    --yellow: #{$yellow};
+}
+
+[data-theme="white"] {
+    --bg: hsl(43, 30%, 100%);
+    --nav: hsl(43, 30%, 95%);
+    --box: hsl(43, 31%, 95%);
+    --input: hsl(43, 30%, 90%);
+    --button: hsl(43, 30%, 90%);
+    --shadow: hsla(0, 0%, 40%, 40%);
+    --text: hsl(0, 0%, 15%);
+    --yellow: #{$dark-yellow};
 }
 
 html,
 body,
 #__next {
-    background-color: $dark-purple;
+    background-color: var(--bg);
 }
 
 html {
@@ -37,3 +71,4 @@ button {
     outline: none;
     border: none;
 }
+

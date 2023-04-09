@@ -4,22 +4,18 @@
     width: 100%;
     height: 32px;
     border-radius: 8px;
-    color: white;
-    background-color: $dark-purple;
+    outline: solid 2px transparent;
+    font-size: 1em;
+    text-align: center;
+    line-height: 2;
+    color: var(--text);
+    background-color: var(--button);
     cursor: pointer;
-
     font-weight: 600;
     text-transform: uppercase;
-    transition: all 0.1s;
-
-    // required for link
-    text-align: center;
-    font-size: 14px;
-    line-height: 32px;
-    outline: solid 2px transparent;
 
     &:hover {
-        background-color: $darkest-purple;
+        opacity: 0.6;
     }
 
     &:focus {

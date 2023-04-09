@@ -8,11 +8,11 @@
     min-height: 120px;
     width: 320px;
     max-width: calc(100vw - 64px);
-    background-color: $light-purple;
-    color: white;
+    background-color: var(--box);
+    color: var(--text);
     z-index: 1000;
     border-radius: 16px;
-    box-shadow: 0px 1px 4px 2px $darkest-purple;
+    box-shadow: 0px 0px 96px 48px var(--shadow);
     padding: 16px 20px;
 
     display: grid;
@@ -25,21 +25,22 @@
     width: 24px;
     height: 24px;
     font-size: 24px;
-    background-color: $dark-purple;
+    background-color: var(--modal);
     text-align: center;
     line-height: 24px;
     font-weight: 600;
     border-radius: 50%;
     outline: solid 2px transparent;
     margin: 4px 4px 0 0;
-    color: white;
+    color: var(--text);
 
     &:hover {
-        background-color: $darkest-purple;
+        background-color: var(--yellow);
+        color: black;
     }
 
     &:focus {
-        outline-color: $dark-yellow;
+        outline-color: var(--yellow);
     }
 }
 
@@ -58,8 +59,6 @@
 
     .info {
         font-weight: 600;
-        color: $pink;
-
         width: 72px;
         display: inline-block;
     }
@@ -67,8 +66,8 @@
 
 .title {
     text-transform: capitalize;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 1.5em;
+    line-height: 1.3;
     margin-bottom: 8px;
 }
 
@@ -94,7 +93,7 @@
         content: attr(data-tooltip);
         display: block;
         position: absolute;
-        background-color: $dark-purple;
+        background-color: var(--color4);
         padding: 4px;
         bottom: 20px;
         left: 50%;

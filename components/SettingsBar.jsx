@@ -32,9 +32,9 @@ export default function SettingsBar({
     ];
 
     const themes = [
-        { label: "🟪 purple", val: "purple" },
         { label: "⬛ black", val: "black" },
         { label: "⬜ white", val: "white" },
+        { label: "🟪 purple", val: "purple" },
     ];
 
     const setSkinTone = useAppSettings((state) => state.setSkinTone);
@@ -66,8 +66,7 @@ export default function SettingsBar({
                 <Dropdown
                     onChangeFunc={setTheme}
                     items={themes}
-                    // onClearFunc={() => set('')}
-                    name="🟪 Purple"
+                    name={themes[0].label}
                 />
 
                 <input

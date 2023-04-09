@@ -28,7 +28,7 @@ export default function Home(props) {
     const emojiSize = useAppSettings((state) => state.emojiSize);
 
     useEffect(() => {
-        document.body.className = appTheme;
+        document.body.setAttribute('data-theme', appTheme)
     }, [appTheme]);
 
     return (

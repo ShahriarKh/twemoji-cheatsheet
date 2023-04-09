@@ -1,36 +1,36 @@
 @use "styles/colors" as *;
 
 .header {
-    background-color: $darkest-purple;
+    background-color: var(--nav);
     padding: 6px 10%;
     gap: 8px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    color: $pink;
-
-    span {
-        color: $light-purple;
-    }
+    color: var(--text);
 
     p {
         text-align: center;
         flex: 1 1 240px;
-        background-color: rgba(0,0,0,0.1);
         padding: 6px;
-        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.8em;
+
+        &:not(:last-of-type) {
+            border-right: solid 2px var(--bg);
+        }
     }
 
     p > a {
         transition: all 0.1s;
-        color: $yellow;
+        color: var(--yellow);
         outline: none;
         border-bottom: solid 2px transparent;
 
         &:hover,
         &:focus {
-            border-bottom-color: $yellow;
+            border-bottom-color: var(--yellow);
         }
     }
 }

@@ -4,7 +4,7 @@
     padding: 16px;
     border-radius: 40%;
     cursor: pointer;
-    background-color: $purple;
+    background-color: var(--box);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +17,6 @@
     }
 
     &:focus {
-        outline-color: $yellow;
+        outline-color: var(--yellow);
     }
 }
